@@ -1,0 +1,30 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>听 · 敦煌壁画里的六位乐伎</title>
+<meta name="description" content="在黑暗的敦煌壁画上移动灯光，找到六位乐伎，听她们一位位加入合奏。合奏为今人想象复原，非历史原声。">
+<meta name="theme-color" content="#050403">
+<meta property="og:type" content="website">
+<meta property="og:title" content="听 · 敦煌壁画里的六位乐伎">
+<meta property="og:description" content="移动灯光，点击乐伎。六位都找到，便是一段合奏。">
+<meta property="og:image" content="https://cyzcyz669.github.io/ting/assets/og.jpg">
+<meta property="og:url" content="https://cyzcyz669.github.io/ting/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050403'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23ffd27a'%3E听%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/images/Dunhuang_fresco.webp" as="image" type="image/webp">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="stage">
+  <div id="mural"><img id="muralImg" alt="敦煌莫高窟壁画中的乐伎局部"><canvas id="placeholder"></canvas><canvas id="pigment"></canvas><div id="hotspots" role="group" aria-label="壁画中的乐伎"></div></div>
+  <div id="dark"></div>
+</div>
+<div id="intro"><h1>听</h1><p id="introText">在黑暗的壁画上，寻找奏乐的人。</p><p class="how">移动灯光，点击乐伎</p>
+  <button id="start" disabled>加载中…</button>
+  <p class="tip">建议戴耳机。iPhone 请先关闭侧边静音开关，否则可能听不到声音。</p>
+  <noscript><p class="tip">需要开启 JavaScript 才能体验。</p></noscript></div>
+<div id="hint" role="status" aria-live="polite"></div>
+<div id="card" role="dialog" aria-modal="false" aria-labelledby="cardTitle" hidden><button id="cardClose" aria-label="关闭">×</button><h2 id="cardTitle"></h2><p id="cardText"></p><cite id="cardSrc"></cite></div>
+<nav id="progress" aria-label="已找到的乐器"><span id="count">0/6</span><span id="names"></span></nav>
+<div id="notices"><span id="phNote" hidden>占位示意图 · 非文物</span><span id="audioNote">合奏为今人想象复原 · 非历史原声</span></div>
+<div id="caption"></div>
+<div id="ending" hidden><p id="endText"></p><p class="note">合奏为今人想象复原 · 非历史原声</p><p id="legend" aria-label="这段合奏里哪些是真的"></p><div class="btns"><button id="replay">再听一次</button><button id="restart">重新开始</button></div></div>
+<script src="audio.js"></script><script src="app.js"></script>
+<script src="credits.js"></script></body></html>
